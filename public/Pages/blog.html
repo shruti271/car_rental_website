@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <style>
+    body {
+      margin: 0;
+      font-size: 28px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .header {
+      background-color: #f1f1f1;
+      padding: 30px;
+      text-align: center;
+    }
+
+    #navbar {
+
+      overflow: hidden;
+      background-color: black;
+    }
+
+    #navbar a {
+      float: right;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    #navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    #navbar a.active {
+      background-color: blue;
+      color: white;
+    }
+
+    .content {
+      padding: 16px;
+    }
+
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    .sticky+.content {
+      padding-top: 60px;
+    }
+
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 7%;
+      text-align: center;
+      background-color: black;
+      color: white;
+      font-size: medium;
+    }
+
+    .img-content {
+      display: block;
+      background: url(/images/1.jpeg) no-repeat;
+      background-size: cover;
+      background-position: left;
+      position: absolute;
+      top: 100px;
+      bottom: 50px;
+      left: 45%;
+      width: 800px;
+      border-radius: 30px;
+      z-index: -1;
+    }
+
+    .container {
+      position: relative;
+      text-align: left;
+      color: black;
+      margin-top: 10%;
+      margin-right: 40%;
+      font-family: 'Times New Roman', Times, serif;
+      margin-left: -10%;
+      font-size: 170%;
+    }
+
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div id="navbar">
+    <a href="/">Home</a>
+    <a class="active" href="blog.html">Blog</a>
+    <a href="contactus.html">Contact</a>
+    <a href="aboutus.html">About Us</a>
+  </div>
+
+
+
+  <div class="img-content"></div>
+  <div class="container">
+    <div class="centered">Easiest way to rent a car</div>
+  </div>
+
+
+
+
+
+  <div class="footer">
+    <p>&copy; 2023 Car Rental Website. All rights reserved.</p>
+  </div>
+
+
+  <script>
+    window.onscroll = function () { myFunction() };
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
+</body>
+
+</html>
